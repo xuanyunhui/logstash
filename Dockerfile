@@ -7,4 +7,3 @@ RUN /usr/share/logstash/bin/logstash-plugin install logstash-filter-translate
 RUN rm -f /usr/share/logstash/pipeline/logstash.conf
     
 ADD GeoLite2-City.mmdb /etc/logstash/
-USER 1001
