@@ -4,8 +4,7 @@ RUN /usr/share/logstash/bin/logstash-plugin install logstash-filter-translate
 #ADD pipeline/ /usr/share/logstash/pipeline/
 #ADD config/ /usr/share/logstash/config/
 
-RUN rm -f /usr/share/logstash/pipeline/logstash.conf && \
-    mkdir -p /usr/share/GeoIP/
+RUN rm -f /usr/share/logstash/pipeline/logstash.conf
     
-COPY GeoLite2-City.mmdb /usr/share/GeoIP/GeoLite2-City.mmdb
+ADD GeoLite2-City.mmdb /etc/logstash/
 USER default
