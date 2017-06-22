@@ -1,4 +1,4 @@
-FROM openshift/logstash:5.4.2
+FROM openshift/logstash-base:5.4.2
 
 RUN /usr/share/logstash/bin/logstash-plugin install logstash-filter-translate
 #ADD pipeline/ /usr/share/logstash/pipeline/
