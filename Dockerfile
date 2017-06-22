@@ -8,3 +8,4 @@ RUN rm -f /usr/share/logstash/pipeline/logstash.conf
     
 ADD GeoLite2-City.mmdb /etc/logstash/
 USER logstash
+RUN chown -R 1001:0 /usr/share/logstash/config && chmod -R og+rw /usr/share/logstash/config
