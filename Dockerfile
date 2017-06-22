@@ -4,8 +4,7 @@ RUN /usr/share/logstash/bin/logstash-plugin install logstash-filter-translate
 #ADD pipeline/ /usr/share/logstash/pipeline/
 #ADD config/ /usr/share/logstash/config/
 
-RUN rm -f /usr/share/logstash/pipeline/logstash.conf && \
-    chown 1001:0 /usr/share/logstash && chmod og+rw /usr/share/logstash
+RUN rm -f /usr/share/logstash/pipeline/logstash.conf
     
 ADD GeoLite2-City.mmdb /etc/logstash/
 USER 1001
